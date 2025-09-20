@@ -11,11 +11,11 @@ import { useAuth } from '@/contexts/AuthContext';
 export default function UploadPage() {
   const router = useRouter();
   const { user } = useAuth();
-  const [selectedImage, setSelectedImage] = useState<File | null>(null);
-  const [imagePreview, setImagePreview] = useState<string | null>(null);
-  const [selectedStyle, setSelectedStyle] = useState<string>('cartoon');
+  const [selectedImage, setSelectedImage] = useState(null as File | null);
+  const [imagePreview, setImagePreview] = useState(null as string | null);
+  const [selectedStyle, setSelectedStyle] = useState('cartoon' as string);
   const [isGenerating, setIsGenerating] = useState(false);
-  const [generationError, setGenerationError] = useState<string | null>(null);
+  const [generationError, setGenerationError] = useState(null as string | null);
   const [generationProgress, setGenerationProgress] = useState(0);
 
   const handleImageSelected = (file: File) => {

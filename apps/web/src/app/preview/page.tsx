@@ -20,12 +20,12 @@ export default function PreviewPage() {
   const { user } = useAuth();
   const jobId = searchParams.get('jobId');
   
-  const [status, setStatus] = useState<JobStatus>('pending');
-  const [stickers, setStickers] = useState<string[]>([]);
-  const [selectedStickers, setSelectedStickers] = useState<number[]>([]);
+  const [status, setStatus] = useState('pending' as JobStatus);
+  const [stickers, setStickers] = useState([] as string[]);
+  const [selectedStickers, setSelectedStickers] = useState([] as number[]);
   const [isDownloading, setIsDownloading] = useState(false);
-  const [stickerData, setStickerData] = useState<StickerData | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [stickerData, setStickerData] = useState(null as StickerData | null);
+  const [error, setError] = useState(null as string | null);
 
   useEffect(() => {
     const loadStickerData = async () => {

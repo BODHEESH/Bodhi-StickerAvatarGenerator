@@ -104,9 +104,9 @@ const styleFilters = [
 
 export default function GalleryPage() {
   const [selectedFilter, setSelectedFilter] = useState('all');
-  const [selectedItem, setSelectedItem] = useState<any>(null);
+  const [selectedItem, setSelectedItem] = useState(null as any);
   const [galleryItems, setGalleryItems] = useState(mockGalleryItems);
-  const [viewMode, setViewMode] = useState<'public' | 'my'>('public');
+  const [viewMode, setViewMode] = useState('public' as 'public' | 'my');
   const { user } = useAuth();
 
   const filteredItems = galleryItems.filter(item => {

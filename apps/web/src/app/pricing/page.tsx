@@ -56,7 +56,7 @@ const pricingPlans = [
 ];
 
 export default function PricingPage() {
-    const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+    const [billingCycle, setBillingCycle] = useState("monthly" as "monthly" | "yearly");
     //   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
   const { user } = useAuth();
   const router = useRouter();
