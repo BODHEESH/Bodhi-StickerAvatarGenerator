@@ -1,13 +1,14 @@
-# Nano Banana Sticker Avatar Generator
+# Bodhi Sticker Avatar Generator
 
-A web application that transforms user photos into Nano Banana-style stickers/avatars they can download and share.
+A web application that transforms user photos into unique, personalized sticker avatars with a modern, clean aesthetic. Create and download your own custom stickers for use across various platforms.
 
 ## Features
 
-- Upload images and transform them into stylized stickers
-- Choose from multiple style options (Retro, Miniature, Cartoon)
-- Generate and download sticker packs for WhatsApp, Telegram, and other platforms
-- Share your creations with friends
+- Upload your photos to create custom sticker avatars
+- Choose from multiple style options to match your personality
+- Download high-quality sticker packs for WhatsApp, Telegram, and other platforms
+- Share your unique sticker avatars with friends and communities
+- User-friendly interface with real-time previews
 
 ## Getting Started
 
@@ -20,8 +21,8 @@ A web application that transforms user photos into Nano Banana-style stickers/av
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/nano-banana-stickers.git
-cd nano-banana-stickers
+git clone https://github.com/yourusername/bodhi-sticker-avatar-generator.git
+cd bodhi-sticker-avatar-generator
 ```
 
 2. Install dependencies
