@@ -1,0 +1,33 @@
+{
+  "name": "bodhisnap-stickers",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev -w apps/web",
+    "dev:api": "npm run dev -w apps/api",
+    "build:web": "npm run build -w apps/web",
+    "build:api": "npm run build -w apps/api",
+    "start:web": "npm run start -w apps/web",
+    "start:api": "npm run start -w apps/api",
+    "lint": "npm run lint --workspaces",
+    "test": "npm run test --workspaces"
+  },
+  "devDependencies": {
+    "@types/bull": "^4.10.4",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/react-dropzone": "^4.2.2",
+    "concurrently": "^8.2.0",
+    "eslint": "^8.44.0",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "react-dropzone": "^14.3.8"
+  }
+}
