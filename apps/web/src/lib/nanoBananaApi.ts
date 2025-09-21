@@ -214,15 +214,23 @@ export const generateMockStickers = async (request: GenerationRequest): Promise<
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 2000));
   
+  // Generate more realistic placeholder images based on style
+  const baseUrl = 'https://picsum.photos/300/300';
+  const styleSeeds = {
+    cartoon: [100, 200, 300, 400],
+    anime: [500, 600, 700, 800],
+    realistic: [900, 1000, 1100, 1200],
+    minimalist: [1300, 1400, 1500, 1600],
+    watercolor: [1700, 1800, 1900, 2000],
+    'pop-art': [2100, 2200, 2300, 2400],
+  };
+  
+  const seeds = styleSeeds[request.style as keyof typeof styleSeeds] || [100, 200, 300, 400];
+  
   return {
     id: `mock_job_${Date.now()}`,
     status: 'completed',
-    images: [
-      '/api/placeholder/300/300',
-      '/api/placeholder/300/300',
-      '/api/placeholder/300/300',
-      '/api/placeholder/300/300',
-    ],
+    images: seeds.map(seed => `${baseUrl}?random=${seed}`),
     progress: 100,
   };
 };
